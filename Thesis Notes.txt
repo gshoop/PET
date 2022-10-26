@@ -1,0 +1,192 @@
+***********************************************************
+***********************************************************
+Yi Gu - HIGH-RESOLUTION SMALL ANIMAL POSITRON
+EMISSION TOMOGRAPHY SYSTEM BASE ON 3-D POSITION-SENSITIVE 
+CADMIUM ZINC TELLURIDE PHOTON DETECTORS
+	thesis notes
+***********************************************************
+***********************************************************
+CHAPTER 2 **********************************************************************************************************************************************
+
+Positron Emission Tomography (PET) is in vivo imaging technique where an active chemical compound "tracer" is introduced into the subject and the PET detecting
+material surrounding the subject detects the radiation emitted from that tracer.
+
+When the radioactive material decays a "positron" is emitted and pairs up with tissue electrons to create an event where radiation will scatter from that
+point.
+
+Positronium exists for a moment when the positron pairs up with the tissue electrons and then an annihilation event occurs where photons are emitted "collinearly"
+and "anti-parallel" to each other. The energy of the photon in this thesis is 5.11 keV.
+
+Detection occurs when the pair of annihilation photons are detected by the photon detectors at the same time. Due to collinearity of the pair of electrons,
+a line of response (LOR) can be extrapolated in order to localize the location of the annihilation event.
+
+NOTE: The photons are emitted "isotropically". (isotropically refers to the fact that the photons will be not be emitted with less or more energy in one direction
+than another) --- the LORs can have a wide distrubtion of angles ---
+
+1-D projections at an angle theta, are obtained when counting the number of LORs intersecting a perpendicular line 'l=aU' as 'a' (alpha) goes from -inf to inf.
+The 1-D projection is the function p.
+
+p is a function p(S(x,y),theta,alpha).
+S(x,y) is a spatial distribution in the x-y plane of the radiotracers in the subject.
+
+Full tomographs are obtained by evaluating p for 'a' from -inf to inf and 'theta' from 0-360 deg.
+The 2-D image is called a 'sinogram'.
+
+p is called the "Radon Transform" of S(x,y) - call this transform P(theta,alpha) evaluated at a specific value of theta.
+
+S can be extracted from P by a "filtered backprojection (FBP)"**** algorithm.
+
+We need to consider two different types of photon interactions in PET. 1. Compton Scattering 2. Photoelectric Effect
+
+Photoelectric Effect - The annihilation photon will be absorbed by a bound electron and this will cause the ejection and emission of a photon from the orbital
+of the tissue atom. The energy of the emitted photon comes from the difference of the annihilation photon energy and the binding energy of the electron.
+
+Compton Scattering - The collision of the annihilation photon with outer shell electrons. The electron will be recoiled along a different direction and the photon
+will be scattered in another direction. The photon will impart energy to the recoiled electron carrying information.
+
+Question - Will the detector detect both the recoil electron AND the scattered photon?
+
+RELEVENT FEATURE - Energy Spectrum Plot. ---- The plot of relative frequency of occurence as a function of energy deposited (***Figure 6.13a)
+
+CHAPTER 3 ***********************************************************************************************************************************************
+
+SPATIAL RESOLUTION ---
+
+physics-level effects contributing to image resolution ---> "positron range", "annihilation photon acollinearity*****"
+
+Positron Range---- Refers to the distance that a positron travels until it's annihilation event. This depends on the surrounding medium and the initial kinetic
+energy of the positron. Positron energy can affect image resolution negatively due to it's stochastic nature.
+
+Annihilation Photon Acollinearity---- Refers to the fact that annihilation photons due not neccessarily travel collinearly and antiparallel. Since the positron
+carryies some momentum with it at the end of it's range the positronium system will have some initial total momentum. Previous findings say photon trajectories
+are normally distributed with FWHM of ~0.5 deg.
+
+Instrumentation effects---- We cannot exactly define LORs as infinitely thin lines since we are restricted by the size and shape of the detectors themselves.
+(Tube of Response). Finer resolution can be obtained through smaller feature size detector elements.
+
+Detector size in scintillation crystal photon detectors depends on the physical dimensions of the crystal.
+Detector size in semiconductor photon detectors depends on the electrode patterns.
+
+IMAGE RESOLUTION UNIFORMITY ---
+
+There will be error introduced if the annihilation photon pairs are emitted offset from the center of the Field of View (FOV) of the detector system. These photons
+will be incident on the photodetectors at oblique angles which is due to the lack of knowledge of the photon's "Depth of Interation (DOI)"***** with the photon 
+detectors. This makes our tube of response larger and thus affects the image resolution.
+
+SIGNAL TO NOISE RATION ---
+
+Poisson Distribution*** is used to observe the probability of the number of photon interactions in a fixed time interval or "scan duration".
+
+SNR is defined as the ratio of mu/sigma --- mu: pixel or image readion's mean (average) signal intensity. sigma: standard deviation of signal fluctuation.
+
+**Intensity** of a PET image pixel is determined by the # of LORs passing through that pixel and how many times each of the LORs were registered during the
+scan duration.
+
+So, if an image pixel is **traversed** by 'k' LORs then we produce 'k' measured values of N, (# of photon interactions detected). Thus the pixel intensity will be 
+determined by the sum of the 'k' measured values of N which are independent and Poisson distributed. Each N will have a mean, lambda, which leads to the
+mean image pixel signal intensity coming from the sum of the 'k' lambda values which will call A. The signal standard deviation is the sqrt(A).
+
+So to increase SNR we would have to perform longer PET scans to get more photon interaction numbers.
+One method of increasing SNR is to maximize the PET's "photon sensitivity"**** (the fraction of radiative decays that result in a PET detected photon pair).
+
+ENERGY RESOLUTION ---
+
+Energy resolution refers to the detection and discarding of events that may not accurately represent the radiotracers and annihilation events.
+For example, Compton Scattering could result in the detection of photons that do not have collinear LORs with the point of the original photon emission.\
+"Energy Grating"**** is a technique used where we may discard photon energy measurements that are below a certain threshold since photons with Compton energy
+will have less energy than annihilation photons. This will be limited by the precision of our energy measurements by the photon detectors.
+
+The precision that photon detectors can measure energy is the "energy resolution". This is defined as the percentage of the FWHM fluctuation in energy 
+measurements and the photon energy currently being measured. High energy resolution will allow us to discard compon scattering interactions which could
+reduce the image quality and resolution.
+
+TIME RESOLUTION ---
+
+It's important to be able to detect coincident events from photon detector pairs. This will depend on the time between detection of incident photons.
+"True Coincidence"*** is the term for when true annihilation photon pairs are detected.
+"Electron collimation"*** is the term to the localization of the radioactive source along the LOR using time coincidence.
+
+Our precision of time detection between annihilation photon detection is the "coincidence time resolution"**** (Typically use FWHM).
+
+The creation of a time window where any pair detected between that time window is concidered true coincidence is called "time gating"****.
+It's not unreasonable to assume that there will probably be incorrectly determined true coincidences between unrelated photon pairs if they are detected 
+within the time gate. This is why good time resolution is important. *****Figure 3.7******
+
+Time difference with a high time resolution can help aid in spacial localization of the positron emission event along the LOR by assigning higher probability
+on areas along the LOR depending on detection of photons during time gates.
+
+
+CHAPTER 4 *********************************************************************************************************************************************
+
+SCINTILLATION PHOTON DETECTORS ---
+
+Scintillation photon detectors are made up of the scintillation crystal detector and photon to electron conversion devices such as photomultiplier tubes (PMT), 
+avalanche diodes (APD), and silicon photomultipliers (SiPM). High energy photons interact with scintillation material by exciting electrons from the valence band 
+of the material and subsequently the generation of visible light photons occur when electrons recombine with the holes generated.
+No matter the devices, the underlying principle is that the scintillation photons should interact with the electron conversion devices by generating current 
+carriers that of which are carried through voltage biased electric field inducing device structures. The signal is "photocurrent"****. Each devices structure has 
+an intrinsic gain where the signal is multiplied through varies methods depending on the conversion device.
+
+Energy measurements can be measured from the amplitude of the photocurrent signals.
+Timing measurements can be measured from the timing measurements of the photocurrent signals.
+
+"Anger logic"*** formulas of equations are used to estimate the x-y position of the interacting photons from the scintillation crystal via the coupling of scintillation 
+crystal arrays coupled with PMTs or ADPs via light diffusers.
+
+DOI positioning is found through z-coordinate information. This is done through the scintillation light decay time of different scintillators.
+
+SEMICONDUCTOR PHOTON DETECTORS ---
+
+Semiconductor photon detectors in contrast to scintillation photon detectors perform the high energy particle to photocurrent in one step rather than needing 
+the usage of electron conversion devices. High energy radiation will excite electrons from the valence band into the material's conduction band and current 
+will be carried through applied electric fields. Having properly tuned band gap materials is important to avoid the scenario where we cannot distinguish the 
+signal from thermally induced leakage current.
+
+CZT and CdTe semiconductors are wide band gap materials with band gap energy >= 1.5 eV. The high atomic number for CZT and CdTe allows for a large interaction 
+cross section for annihilation photons to interact with which allows the making of smaller detectors. They also have high resistivity to leakage currents.
+
+Energy measurements can be made from signal amplitude and time measurements can be made from time measurements of the signal.
+However, semiconductor photon detectors have higher accuracy for energy measurements than scintillation photon detectors and lower accuracy for time measurements 
+than scintillation photon detectors. The time measurement inaccuracy is due to semiconductor photon detector's inability to transport charge as quickly as 
+the propogation of scintillation photons would be able to.
+
+2-D position inference and DOI capabilities are achieved through discretization of the electrode contacts into pixels.
+
+
+CZT MATERIAL PROPERTIES ---
+
+FCC sub-lattice structure.
+Can be grown using physical vapor deposition methods, "Bridgeman method"*****, and "traveling heater method"******
+CZT has a high fraction of compton scattering photon interactions compared to the fraction of photoelectric absortpion scattering.
+CZT is brittle. Soldering metal contacts with a circuit board could crack the crystal because of the weak CZT lattice bonds at the surface.
+
+METAL-CZT JUNCTION ---
+
+Metal-Semiconductor-Metal configurations are the most basic structures for radiation detectors. Gold or Platinum are used as ohmic contacts because they posses 
+similar work functions to CZT. Thickness of the metal layer must be tuned correctly to avoid unwanted surface reconstruction or defection from high stress or 
+diffusion of solder.
+
+CZT RESISTIVITY ---
+
+Resistivity can be affected by crystal surface preparation, internal crystal defects, and orientation of voltage bias to the crystal lattice.
+
+Crystal Surface Preparation : The crystal surface needs to be oxidized or polished to maintain high resistivity at the crystal surface of the detector.
+
+Voltage Bias Orientaiton : Care must be.0 taken in determining the lattice plane of the CZT crystal that makes contact with the metal. Surface planes with 
+abundance of tellurium atoms can have a weak "n-type" behavior and surfaces with more cadmium atoms will have lower electric resistivity.
+
+Internal Crystal Defects : Impurities and bulk material defects can effect elecric field uniformity through the crystal or even create conditions for unwanted 
+large dark current through the bulk. IR can be used to inspect the crystal for defects.
+
+IONIZATION ENERGY AND FANO FACTOR ---
+
+Semiconductor photon detecters have good energy resolution since electron-hole pair generation is less of a probabilistic process than in how scintillation 
+photon detectors go about generating photocurrent. We can determine with some accuracy that the loss of photoelectron energy in a collision is related to 
+the ionization energy and phonon energy (****Equation 4.4****).
+
+"Fano Factor" : denoted as F relates the instrinsic signal variance in the semiconductor to the mean number of electron-hole pairs generated (**Equations 4.5-6**). 
+This factor can be used to determine energy resolution.
+
+CHARGE TRANSPORT IN CZT ---
+
+
