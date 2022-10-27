@@ -2,9 +2,9 @@
 
 ## __TO-DO LIST__
 
-- [ ] Dig into the `Medium` class and understand how it derives the fundamental material properties such as electron/hole velocities/mobilities, density of states, etc..
+- [ ] Dig into the `Medium` class, in order to implement `MediumCZT` class in the future, and understand how it derives the fundamental material properties such as electron/hole velocities/mobilities, density of states, etc..
 
-
+- [ ] Plot the induced charge/weighting potential on the electrode as a function of time from the silicon sensor example.
 ## Installation
 Installation was relatively simple, with a few hiccups here or there installing the dependencies such as..
 * [ROOT](https://root.cern.ch/)
