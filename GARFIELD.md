@@ -7,15 +7,15 @@
 
 ## Installation
 Installation was relatively simple, with a few hiccups here or there installing the dependencies such as..
-* ROOT
-* GEANT4
+* [ROOT](https://root.cern.ch/)
+* [GEANT4](https://geant4.web.cern.ch/)
 * GSL
 * CMake
 
 The following PDF by Irina Kempf was useful in understanding how to compile and build Garfieldpp and all of the dependencies.
 https://garfieldpp.web.cern.ch/getting-started/Garfield_Installation_Ubuntu_by_Irina_Kempf_20210428.pdf
 
-\
+
 Garfieldpp gitlab site: https://gitlab.cern.ch/garfield/garfieldpp \
 Garfield Documentation: https://garfieldpp.web.cern.ch/garfieldpp/  
 
