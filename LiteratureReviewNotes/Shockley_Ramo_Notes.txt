@@ -25,4 +25,3 @@ SHOCKLEY-RAMO THEOREM --- Q induced on an electrode is proportional to the point
 ASSUMPTIONS --- The electric field propogates instantaneously and magnetic fields are negligible.
 
 The field needed to be calculated is independent of the moving charge 'q'.
-
