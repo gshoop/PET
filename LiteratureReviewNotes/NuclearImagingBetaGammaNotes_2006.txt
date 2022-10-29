@@ -5,3 +5,18 @@ Nuclear medical imaging using b+g coincidences from
 - 2006
 ----------------------------------------------------------------------------------------------------
 
+
+PROTOTYPE -------------------------
+
+The system consists of a microPET ring with Lutetium oxyorthosilicate (LSO) scintillating crystal detector and the associated Compton Camera with LXe scintillation detectors.
+Their prototype functioning follows a time projection chamber (TPC) principle. The Liquid Xenon (LXe) detector is a scintillation detector and is readout with PMT.
+- "Conversion Depth"****???? is determined by the electron drift time in the detectors.
+- The two other coordinates and energy measurements are provided by anode signal sampling in LXe.
+
+
+SIMULATION ------------------------
+
+** The authors used AliROOT software with GEANT3 Monte Carlo code to simulate their module. **
+
+In order to show proof of concept and feasability the author's provided simulated energy spectrum of 44Sc source detected by a LXe module.
+They claim 4.3% FWHM at 1.157 MeV from the LXe Compton telescope and 5.7% FWHM at 511 keV. This is good energy resolution needed for spatial resolution at the scale of a few mm.

@@ -2,9 +2,11 @@
 
 ## __TO-DO LIST__
 
-- [ ] Dig into the `Medium` class, in order to implement `MediumCZT` class in the future, and understand how it derives the fundamental material properties such as electron/hole velocities/mobilities, density of states, etc..
+- [ ] Dig into the `Medium` class, in order to implement `MediumCZT` class in the future, and understand how it derives the fundamental material properties such as electron/hole velocities/mobilities, density of states, etc.. Need to come up with a way to feasibly introduce a CZT class for use in calculating the induced charge on anodes.
 
 - [ ] Plot the induced charge/weighting potential on the electrode as a function of time from the silicon sensor example.
+- [ ] Is it possible to use garfieldpp to simulate energy spectrum of 44Sc with a CZT compton telescope?
+- [ ] Need to find out whether the full system of the compton-PET system will be CZT or if only the PET componenet will be CZT while the compton telescope would be CZT or something else? (LXe, etc...)
 ## Installation
 Installation was relatively simple, with a few hiccups here or there installing the dependencies such as..
 * [ROOT](https://root.cern.ch/)
