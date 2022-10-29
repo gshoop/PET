@@ -16,7 +16,7 @@ Their prototype functioning follows a time projection chamber (TPC) principle. T
 
 SIMULATION ------------------------
 
-** The authors used AliROOT software with GEANT3 Monte Carlo code to simulate their module. **
+** The authors used AliROOT (Alice) software with GEANT3 Monte Carlo code to simulate their module. **
 
 In order to show proof of concept and feasability the author's provided simulated energy spectrum of 44Sc source detected by a LXe module.
 They claim 4.3% FWHM at 1.157 MeV from the LXe Compton telescope and 5.7% FWHM at 511 keV. This is good energy resolution needed for spatial resolution at the scale of a few mm.

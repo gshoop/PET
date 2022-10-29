@@ -12,15 +12,15 @@ The electric charge q is generated and induces a charge Q on the electrodes of t
 This charge Q is induced due to the movement of charge q through the semiconductor toward each of the electrodes.
 This charge is amplified and converted to an output signal for signal processing/ADC/etc.
 
-???? The time dependent output signal of a charge sensing device can be predicted  if the induced charge Q on the electrode can
+???? The time dependent output signal of a charge sensing device can be predicted if the induced charge Q on the electrode can
 	be calculated as a function of instantaneous position of the moving charge q within the device ????????????? IMPORTANT
 
 *****************************
 
 SHOCKLEY-RAMO THEOREM --- Q induced on an electrode is proportional to the point charge q and it's potential at instantaneous position x given the selected
-				electrode is at unit potential and all other electrodes grounded with all charges removed.
-		      --- Current 'i' on an electrode is proportional to the charge q, it's instantaneous velocity, and electric field at instantaneous position x given the
-				selected electrode is at unit potential and all other electrodes grounded with all charges removed.
+				  electrode is at unit potential and all other electrodes grounded with all charges removed.
+		     	    --- Current 'i' on an electrode is proportional to the charge q, it's instantaneous velocity, and electric field at instantaneous position x given the
+				  selected electrode is at unit potential and all other electrodes grounded with all charges removed.
 
 ASSUMPTIONS --- The electric field propogates instantaneously and magnetic fields are negligible.
 
