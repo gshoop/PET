@@ -43,3 +43,4 @@ Getting the transport properties for electrons and holes is simple. We need a me
 
 1. If Garfield is to be used we need to create our own `MediumCZT` class. In the example above we are using Si however there *is* a `MediumCdTe` class that could serve as a good starting point.
     * It seems that a `MediumCZT` class can be inherited and created on top of the `Medium` class provided by Garfield.
+2. Will need to learn how to interface garfieldpp with geant4/root in order to simulate counts vs. energy
