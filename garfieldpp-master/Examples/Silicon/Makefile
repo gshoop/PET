@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon
+CMAKE_SOURCE_DIR = /home/swuupie/PET/garfieldpp-master/Examples/Silicon
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon
+CMAKE_BINARY_DIR = /home/swuupie/PET/garfieldpp-master/Examples/Silicon
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cdTe
+
+# Build rule for target.
+cdTe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cdTe
+.PHONY : cdTe
+
+# fast build rule for target.
+cdTe/fast:
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/build
+.PHONY : cdTe/fast
+
+#=============================================================================
+# Target rules for targets named example
+
+# Build rule for target.
+example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example
+.PHONY : example
+
+# fast build rule for target.
+example/fast:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/build
+.PHONY : example/fast
+
+#=============================================================================
 # Target rules for targets named planar_movie
 
 # Build rule for target.
@@ -135,6 +161,60 @@ planar: cmake_check_build_system
 planar/fast:
 	$(MAKE) -f CMakeFiles/planar.dir/build.make CMakeFiles/planar.dir/build
 .PHONY : planar/fast
+
+ProjectCZT/example.o: ProjectCZT/example.C.o
+
+.PHONY : ProjectCZT/example.o
+
+# target to build an object file
+ProjectCZT/example.C.o:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/ProjectCZT/example.C.o
+.PHONY : ProjectCZT/example.C.o
+
+ProjectCZT/example.i: ProjectCZT/example.C.i
+
+.PHONY : ProjectCZT/example.i
+
+# target to preprocess a source file
+ProjectCZT/example.C.i:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/ProjectCZT/example.C.i
+.PHONY : ProjectCZT/example.C.i
+
+ProjectCZT/example.s: ProjectCZT/example.C.s
+
+.PHONY : ProjectCZT/example.s
+
+# target to generate assembly for a file
+ProjectCZT/example.C.s:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/ProjectCZT/example.C.s
+.PHONY : ProjectCZT/example.C.s
+
+ProjectCZT/exampleCdTe.o: ProjectCZT/exampleCdTe.C.o
+
+.PHONY : ProjectCZT/exampleCdTe.o
+
+# target to build an object file
+ProjectCZT/exampleCdTe.C.o:
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/ProjectCZT/exampleCdTe.C.o
+.PHONY : ProjectCZT/exampleCdTe.C.o
+
+ProjectCZT/exampleCdTe.i: ProjectCZT/exampleCdTe.C.i
+
+.PHONY : ProjectCZT/exampleCdTe.i
+
+# target to preprocess a source file
+ProjectCZT/exampleCdTe.C.i:
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/ProjectCZT/exampleCdTe.C.i
+.PHONY : ProjectCZT/exampleCdTe.C.i
+
+ProjectCZT/exampleCdTe.s: ProjectCZT/exampleCdTe.C.s
+
+.PHONY : ProjectCZT/exampleCdTe.s
+
+# target to generate assembly for a file
+ProjectCZT/exampleCdTe.C.s:
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/ProjectCZT/exampleCdTe.C.s
+.PHONY : ProjectCZT/exampleCdTe.C.s
 
 planar.o: planar.C.o
 
@@ -197,9 +277,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... cdTe"
+	@echo "... example"
 	@echo "... planar_movie"
 	@echo "... edit_cache"
 	@echo "... planar"
+	@echo "... ProjectCZT/example.o"
+	@echo "... ProjectCZT/example.i"
+	@echo "... ProjectCZT/example.s"
+	@echo "... ProjectCZT/exampleCdTe.o"
+	@echo "... ProjectCZT/exampleCdTe.i"
+	@echo "... ProjectCZT/exampleCdTe.s"
 	@echo "... planar.o"
 	@echo "... planar.i"
 	@echo "... planar.s"

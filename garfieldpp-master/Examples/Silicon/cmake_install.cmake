@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon
+# Install script for directory: /home/swuupie/PET/garfieldpp-master/Examples/Silicon
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/swuupie/PET/garfieldpp-master/Examples/Silicon/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

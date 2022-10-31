@@ -44,15 +44,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon
+CMAKE_SOURCE_DIR = /home/swuupie/PET/garfieldpp-master/Examples/Silicon
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon
+CMAKE_BINARY_DIR = /home/swuupie/PET/garfieldpp-master/Examples/Silicon
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/cdTe.dir/all
+all: CMakeFiles/example.dir/all
 all: CMakeFiles/planar_movie.dir/all
 all: CMakeFiles/planar.dir/all
 
@@ -64,10 +66,66 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/cdTe.dir/clean
+clean: CMakeFiles/example.dir/clean
 clean: CMakeFiles/planar_movie.dir/clean
 clean: CMakeFiles/planar.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cdTe.dir
+
+# All Build rule for target.
+CMakeFiles/cdTe.dir/all:
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/depend
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles --progress-num=1,2 "Built target cdTe"
+.PHONY : CMakeFiles/cdTe.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cdTe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cdTe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
+.PHONY : CMakeFiles/cdTe.dir/rule
+
+# Convenience name for target.
+cdTe: CMakeFiles/cdTe.dir/rule
+
+.PHONY : cdTe
+
+# clean rule for target.
+CMakeFiles/cdTe.dir/clean:
+	$(MAKE) -f CMakeFiles/cdTe.dir/build.make CMakeFiles/cdTe.dir/clean
+.PHONY : CMakeFiles/cdTe.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/example.dir
+
+# All Build rule for target.
+CMakeFiles/example.dir/all:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/depend
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles --progress-num=3,4 "Built target example"
+.PHONY : CMakeFiles/example.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/example.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/example.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
+.PHONY : CMakeFiles/example.dir/rule
+
+# Convenience name for target.
+example: CMakeFiles/example.dir/rule
+
+.PHONY : example
+
+# clean rule for target.
+CMakeFiles/example.dir/clean:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/clean
+.PHONY : CMakeFiles/example.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/planar_movie.dir
@@ -76,14 +134,14 @@ clean: CMakeFiles/planar.dir/clean
 CMakeFiles/planar_movie.dir/all:
 	$(MAKE) -f CMakeFiles/planar_movie.dir/build.make CMakeFiles/planar_movie.dir/depend
 	$(MAKE) -f CMakeFiles/planar_movie.dir/build.make CMakeFiles/planar_movie.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles --progress-num=3,4 "Built target planar_movie"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles --progress-num=7,8 "Built target planar_movie"
 .PHONY : CMakeFiles/planar_movie.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/planar_movie.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/planar_movie.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
 .PHONY : CMakeFiles/planar_movie.dir/rule
 
 # Convenience name for target.
@@ -103,14 +161,14 @@ CMakeFiles/planar_movie.dir/clean:
 CMakeFiles/planar.dir/all:
 	$(MAKE) -f CMakeFiles/planar.dir/build.make CMakeFiles/planar.dir/depend
 	$(MAKE) -f CMakeFiles/planar.dir/build.make CMakeFiles/planar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles --progress-num=1,2 "Built target planar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles --progress-num=5,6 "Built target planar"
 .PHONY : CMakeFiles/planar.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/planar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/planar.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/greys/Documents/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/swuupie/PET/garfieldpp-master/Examples/Silicon/CMakeFiles 0
 .PHONY : CMakeFiles/planar.dir/rule
 
 # Convenience name for target.
