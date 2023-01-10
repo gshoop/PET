@@ -18,6 +18,10 @@ Installation was relatively simple, with a few hiccups here or there installing 
 The following PDF by Irina Kempf was useful in understanding how to compile and build Garfieldpp and all of the dependencies.
 https://garfieldpp.web.cern.ch/getting-started/Garfield_Installation_Ubuntu_by_Irina_Kempf_20210428.pdf
 
+NOTE -- Before using cmake on garfieldpp make sure to set the Geant4_DIR to the geant4 installed cmake source directory in order to build the geant4 interface examples...
+```
+export Geant4_DIR=/$path-to-directory/geant4-v11.1.0-install/
+```
 
 Garfieldpp gitlab site: https://gitlab.cern.ch/garfield/garfieldpp \
 Garfield Documentation: https://garfieldpp.web.cern.ch/garfieldpp/  
@@ -27,6 +31,8 @@ Useful things to note were making sure to **source** root and garfieldpp when st
 source /$path-to-directory/root/bin/thisroot.sh
 source /$path-to-directory/garfieldpp/install/share/Garfield/setupGarfield.sh
 ```
+
+
 ## Calculating Weighting Potential
 
 I'm attempting to calculate the weighting potential and simulate the retrieval of a signal from a semiconductor solid with anode/cathode electrodes.
