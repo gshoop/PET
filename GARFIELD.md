@@ -20,7 +20,7 @@ https://garfieldpp.web.cern.ch/getting-started/Garfield_Installation_Ubuntu_by_I
 
 NOTE -- Before using cmake on garfieldpp make sure to set the Geant4_DIR to the geant4 installed cmake source directory in order to build the geant4 interface examples...
 ```
-export Geant4_DIR=/$path-to-directory/geant4-v11.1.0-install/
+export Geant4_DIR=/$path-to-directory/geant4-v11.1.0-install/lib/cmake/Geant4/
 ```
 
 Garfieldpp gitlab site: https://gitlab.cern.ch/garfield/garfieldpp \
