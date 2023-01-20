@@ -12,7 +12,8 @@ The small pixel effect describes the issues that come with trying to get good en
 
  Compton camera imaging for medical imaging takes advantage of compton scattering events of high energy radiation. Compton camera's are comprised of two stages, the first is a scattering stage and the second is the asborption stage where photoabsorption occurs.
 
- ** Klein-Nishina Formula -- ?? What is it. \
+ ** Klein-Nishina Formula -- ?? What is it. 
+ A: Klein-Nishina Formula describes compton scattering interaction probabilities in the form of differential cross section.
  ** Doppler Energy Broadening -- ?? What is it.
 
  ## Detector Requirements
