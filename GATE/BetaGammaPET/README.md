@@ -59,3 +59,17 @@ Adding the 4x4x0.5 cm^3 CZT detector
 /gate/pixel/forceSolid
 /gate/pixel/setVisible true
 ```
+
+# Geometry 3
+![image](https://user-images.githubusercontent.com/44107373/219123212-c54fc40b-b814-46fc-9780-3262b0f8560a.png)
+
+Repeating the CZT crystals in the z-direction for a total of 30
+```
+# REPEATING PIXEL
+/gate/pixel/repeaters/insert cubicArray
+/gate/pixel/cubicArray/setRepeatNumberX 1
+/gate/pixel/cubicArray/setRepeatNumberY 1
+/gate/pixel/cubicArray/setRepeatNumberZ 30
+/gate/pixel/cubicArray/setRepeatVector 0.0 0.0 0.5 cm
+```
+
