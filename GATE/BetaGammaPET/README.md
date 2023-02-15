@@ -46,7 +46,7 @@ This geometry was created with the following.
 ![image](https://user-images.githubusercontent.com/44107373/219119650-5fcdc630-75a1-481e-8403-ac15a4994bf4.png)
 ![image](https://user-images.githubusercontent.com/44107373/219120103-4e2441df-bf20-42d6-b2c3-83f19981aa72.png)
 
-Adding the 4x4x0.5 cm^3 CZT detector
+Adding the 4x4x0.5 cm^3 CZT detector.
 ```
 # PIXEL
 /gate/block/daughters/name pixel
@@ -63,7 +63,7 @@ Adding the 4x4x0.5 cm^3 CZT detector
 # Geometry 3
 ![image](https://user-images.githubusercontent.com/44107373/219123212-c54fc40b-b814-46fc-9780-3262b0f8560a.png)
 
-Repeating the CZT crystals in the z-direction for a total of 30
+Repeating the CZT crystals in the z-direction for a total of 30.
 ```
 # REPEATING PIXEL
 /gate/pixel/repeaters/insert cubicArray
@@ -73,3 +73,12 @@ Repeating the CZT crystals in the z-direction for a total of 30
 /gate/pixel/cubicArray/setRepeatVector 0.0 0.0 0.5 cm
 ```
 
+# Geometry 4
+![image](https://user-images.githubusercontent.com/44107373/219125295-6ec72ba9-76a0-4899-bee2-936a25610343.png)
+
+Repeating the CZT blocks in a ring for a total of 23 detector blocks around the circumference.
+```
+# RING REPEAT
+/gate/block/repeaters/insert ring
+/gate/block/ring/setRepeatNumber 23
+```
