@@ -41,3 +41,21 @@ This geometry was created with the following.
 /gate/block/vis/setColor yellow
 /gate/block/vis/forceWireFrame
 ```
+
+# Geometry 2
+![image](https://user-images.githubusercontent.com/44107373/219119650-5fcdc630-75a1-481e-8403-ac15a4994bf4.png)
+![image](https://user-images.githubusercontent.com/44107373/219120103-4e2441df-bf20-42d6-b2c3-83f19981aa72.png)
+
+Adding the 4x4x0.5 cm^3 CZT detector
+```
+# PIXEL
+/gate/block/daughters/name pixel
+/gate/block/daughters/insert box
+/gate/pixel/geometry/setXLength 4.0 cm
+/gate/pixel/geometry/setYLength 4.0 cm
+/gate/pixel/geometry/setZLength 0.5 cm
+/gate/pixel/setMaterial CZT
+/gate/pixel/setcolor green
+/gate/pixel/forceSolid
+/gate/pixel/setVisible true
+```
