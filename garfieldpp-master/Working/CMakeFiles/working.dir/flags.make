@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DVECCORE_ENABLE_VC
 
-CXX_INCLUDES = -isystem /home/swuupie/garfieldpp/install/include -isystem /home/swuupie/root/include 
+CXX_INCLUDES = -isystem /home/swuupie/garfield/install/include -isystem /home/swuupie/root/include 
 

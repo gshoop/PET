@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "working.C": "cpp"
+    },
+    "cmake.configureOnOpen": true
+}

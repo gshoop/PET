@@ -227,7 +227,7 @@ GSL_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libgsl.so
 GSL_ROOT_DIR:STRING=/usr
 
 //The directory containing a CMake configuration file for Garfield.
-Garfield_DIR:PATH=/home/swuupie/garfieldpp/install/share/Garfield/cmake
+Garfield_DIR:PATH=/home/swuupie/garfield/install/share/Garfield/cmake
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
