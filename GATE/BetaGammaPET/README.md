@@ -82,3 +82,18 @@ Repeating the CZT blocks in a ring for a total of 23 detector blocks around the 
 /gate/block/repeaters/insert ring
 /gate/block/ring/setRepeatNumber 23
 ```
+
+```
+# ATTACH VOLUMES AND SENSITIVE DETECTOR
+/gate/systems/cylindricalPET/rsector/attach block
+/gate/systems/cylindricalPET/module/attach pixel
+/gate/pixel/attachCrystalSD
+```
+
+# Phantom
+![image](https://user-images.githubusercontent.com/44107373/219134199-d41106b5-dc50-49a6-906f-eeae6f67599c.png)
+
+```
+# PHANTOM
+
+```
