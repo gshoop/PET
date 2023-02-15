@@ -19,8 +19,8 @@ This geometry was created with the following.
 /gate/world/daughters/name cylindricalPET
 /gate/world/daughters/insert cylinder
 /gate/cylindricalPET/placement/setTranslation 0.0 0.0 0.0 cm
-/gate/cylindricalPET/geometry/setRmin 20.0 cm
-/gate/cylindricalPET/geometry/setRmax 25.0 cm
+/gate/cylindricalPET/geometry/setRmin 16.0 cm
+/gate/cylindricalPET/geometry/setRmax 20.2 cm
 /gate/cylindricalPET/geometry/setHeight 15.0 cm
 /gate/cylindricalPET/setMaterial Vacuum
 /gate/cylindricalPET/vis/setVisible true
@@ -32,7 +32,7 @@ This geometry was created with the following.
 # DETECTOR BLOCK
 /gate/cylindricalPET/daughters/name block
 /gate/cylindricalPET/daughters/insert box
-/gate/block/placement/setTranslation 22.2 0.0 0.0 cm
+/gate/block/placement/setTranslation 18.0 0.0 0.0 cm
 /gate/block/geometry/setXLength 4.0 cm
 /gate/block/geometry/setYLength 4.0 cm
 /gate/block/geometry/setZLength 15.0 cm
@@ -74,7 +74,7 @@ Repeating the CZT crystals in the z-direction for a total of 30.
 ```
 
 # Geometry 4
-![image](https://user-images.githubusercontent.com/44107373/219125295-6ec72ba9-76a0-4899-bee2-936a25610343.png)
+![image](https://user-images.githubusercontent.com/44107373/219128004-70959f9d-b0e9-40ad-bc85-4c7156a52cb0.png)
 
 Repeating the CZT blocks in a ring for a total of 23 detector blocks around the circumference.
 ```
