@@ -3,7 +3,7 @@ Geometry 1
 
 This geometry was created with the following.
 
-'''
+```
 /gate/world/geometry/setXLength 60. cm
 /gate/world/geometry/setYLength 60. cm
 /gate/world/geometry/setZLength 40. cm
@@ -11,5 +11,4 @@ This geometry was created with the following.
 /gate/world/setVisible true
 /gate/world/setColor white
 /gate/world/forcewireframe
-
-'''
+```
