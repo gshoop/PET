@@ -1,0 +1,5 @@
+/gate/source/addSource point Extended
+/gate/source/point/setType pPs
+/gate/source/point/setEnableDeexcitation true
+/gate/source/point/setPromptGammaEnergy 1.0 MeV
+/gate/source/point/setActivity 74000000. becquerel

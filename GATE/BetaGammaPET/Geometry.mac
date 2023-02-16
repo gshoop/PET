@@ -1,0 +1,60 @@
+
+# =====================================================================
+# CylindricalPET
+# =====================================================================
+/gate/world/daughters/name				cylindricalPET
+/gate/world/daughters/insert				cylinder
+/gate/cylindricalPET/placement/setTranslation		0.0 0.0 0.0 cm
+/gate/cylindricalPET/geometry/setRmin			16.0 cm
+/gate/cylindricalPET/geometry/setRmax			20.2 cm
+/gate/cylindricalPET/geometry/setHeight			15.0 cm
+/gate/cylindricalPET/setMaterial			Vacuum
+/gate/cylindricalPET/vis/setColor			cyan
+/gate/cylindricalPET/vis/forceWireframe
+/gate/cylindricalPET/vis/setVisible			0
+# =====================================================================
+# Detector Block
+# =====================================================================
+/gate/cylindricalPET/daughters/name 			block
+/gate/cylindricalPET/daughters/insert			box
+/gate/block/placement/setTranslation			18.0 0.0 0.0 cm
+/gate/block/geometry/setXLength				4.0 cm
+/gate/block/geometry/setYLength				4.0 cm
+/gate/block/geometry/setZLength				15.0 cm
+/gate/block/setMaterial					Vacuum
+/gate/block/vis/setColor				yellow
+/gate/block/vis/forceWireframe
+/gate/block/vis/setVisible				true
+# =====================================================================
+# CZT Crystal (Pixel)
+# =====================================================================
+/gate/block/daughters/name 				pixel
+/gate/block/daughters/insert				box
+/gate/pixel/geometry/setXLength				4.0 cm
+/gate/pixel/geometry/setYLength				4.0 cm
+/gate/pixel/geometry/setZLength				0.5 cm
+/gate/pixel/setMaterial					CZT
+/gate/pixel/vis/setColor				green
+/gate/pixel/vis/forceSolid
+/gate/pixel/vis/setVisible				true
+# =====================================================================
+# Repeat Pixel
+# =====================================================================
+/gate/pixel/repeaters/insert 				cubicArray
+/gate/pixel/cubicArray/setRepeatNumberX			1
+/gate/pixel/cubicArray/setRepeatNumberY			1
+/gate/pixel/cubicArray/setRepeatNumberZ			30
+/gate/pixel/cubicArray/setRepeatVector			0.0 0.0 0.5 cm
+# =====================================================================
+# Repeat Ring
+# =====================================================================
+/gate/block/repeaters/insert				ring
+/gate/block/ring/setRepeatNumber			23
+# =====================================================================
+# Attach Volumes & Sensitive Detectors
+# =====================================================================
+/gate/systems/cylindricalPET/rsector/attach		block
+/gate/systems/cylindricalPET/module/attach		pixel
+/gate/pixel/attachCrystalSD
+
+/gate/geometry/rebuild

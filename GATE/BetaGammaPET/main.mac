@@ -1,0 +1,80 @@
+#=====================================================
+# Material
+#=====================================================
+/gate/geometry/setMaterialDatabase    ./GateMaterials.db
+
+#=====================================================
+# World
+#=====================================================
+/gate/world/geometry/setXLength      	60. cm
+/gate/world/geometry/setYLength      	60. cm
+/gate/world/geometry/setZLength		60. cm
+/gate/world/setMaterial 		Vacuum
+/gate/world/vis/setVisible		true
+/gate/world/vis/setColor		white
+/gate/world/vis/forceWireframe
+
+#=====================================================
+# Geometry
+#=====================================================
+/control/execute ./Geometry.mac
+
+#=====================================================
+# Phantom
+#=====================================================
+/control/execute ./Phantom_HN.mac
+
+#=====================================================
+# Visualization Check
+#=====================================================
+#/control/execute ./Visualization.mac
+
+#=====================================================
+# Physics
+#=====================================================
+#/control/execute ./egammaStandardPhys.mac
+/control/execute ./Physics.mac
+
+#=====================================================
+# Actor
+#=====================================================
+/gate/actor/addActor	SimulationStatisticActor stat
+/gate/actor/stat/save	./output/stat.txt
+/gate/actor/stat/saveEveryNSeconds 60
+
+#=====================================================
+# Initialize
+#=====================================================
+/gate/run/initialize
+
+#=====================================================
+# Digitizer
+#=====================================================
+/control/execute ./Digitizer.mac
+
+#=====================================================
+# Source
+#=====================================================
+/control/execute ./Source_HN.mac
+/gate/source/list
+
+/gate/output/ascii/enable
+/gate/output/ascii/setFileName ./output/simple_
+/gate/output/ascii/setOutFileHitsFlag 0
+/gate/output/ascii/setOutFileSinglesFlag 0
+/gate/output/ascii/setOutFileCoincidencesFlag 1
+
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+/gate/application/setTimeSlice 1 s
+/gate/application/setTimeStart 0 s
+/gate/application/setTimeStop 5 s
+/gate/application/startDAQ
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+# ==============================================================
+# Phantom Geometry
+# ==============================================================
+/gate/world/daughters/name			HeadNeck
+/gate/world/daughters/insert			cylinder
+/gate/HeadNeck/setMaterial			Water
+/gate/HeadNeck/geometry/setRmax			10.0 cm
+/gate/HeadNeck/geometry/setHeight		30.0 cm
+/gate/HeadNeck/placement/setTranslation		0.0 0.0 0.0 cm
+
+# ==============================================================
+# Phantom Visualization
+# ==============================================================
+/gate/HeadNeck/vis/setColor			grey
+/gate/HeadNeck/vis/forceSolid
+/gate/HeadNeck/vis/setVisible			true
+#/gate/geometry/rebuild
