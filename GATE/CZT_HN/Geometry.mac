@@ -1,0 +1,67 @@
+#=====================================================
+# World
+#=====================================================
+/gate/world/geometry/setXLength      	1000. mm
+/gate/world/geometry/setYLength      	1000. mm
+/gate/world/geometry/setZLength		    1000. mm
+/gate/world/setMaterial 		Vacuum
+/gate/world/vis/setVisible		true
+/gate/world/vis/setColor		white
+/gate/world/vis/forceWireframe
+# =====================================================================
+# CylindricalPET
+# =====================================================================
+/gate/world/daughters/name				cylindricalPET
+/gate/world/daughters/insert				cylinder
+/gate/cylindricalPET/placement/setTranslation		0.0 0.0 0.0 mm
+/gate/cylindricalPET/geometry/setRmin			60. mm
+/gate/cylindricalPET/geometry/setRmax			300. mm
+/gate/cylindricalPET/geometry/setHeight			300. mm
+/gate/cylindricalPET/setMaterial			Vacuum
+/gate/cylindricalPET/vis/setColor			cyan
+/gate/cylindricalPET/vis/forceWireframe
+/gate/cylindricalPET/vis/setVisible			True
+# =====================================================================
+# Detector Panel
+# =====================================================================
+/gate/cylindricalPET/daughters/name 			panel
+/gate/cylindricalPET/daughters/insert			box
+/gate/panel/placement/setTranslation			110. 0.0 0.0 mm
+/gate/panel/geometry/setXLength				40. mm
+/gate/panel/geometry/setYLength				150. mm
+/gate/panel/geometry/setZLength				200. mm
+/gate/panel/setMaterial					Vacuum
+/gate/panel/vis/setColor				yellow
+/gate/panel/vis/forceWireframe
+/gate/panel/vis/setVisible				true
+# =====================================================================
+# CZT Crystal (Pixel)
+# =====================================================================
+/gate/panel/daughters/name 				pixel
+/gate/panel/daughters/insert				box
+/gate/pixel/geometry/setXLength				4.0 cm
+/gate/pixel/geometry/setYLength				0.5 cm
+/gate/pixel/geometry/setZLength				4.0 cm
+/gate/pixel/setMaterial					CZT
+/gate/pixel/vis/setColor				green
+/gate/pixel/vis/forceSolid
+/gate/pixel/vis/setVisible				true
+# =====================================================================
+# Repeat Pixel
+# =====================================================================
+/gate/pixel/repeaters/insert 				cubicArray
+/gate/pixel/cubicArray/setRepeatNumberX			1
+/gate/pixel/cubicArray/setRepeatNumberY			30
+/gate/pixel/cubicArray/setRepeatNumberZ			5
+/gate/pixel/cubicArray/setRepeatVector			0.0 0.5 4.0 cm
+# =====================================================================
+# Repeat Ring
+# =====================================================================
+/gate/panel/repeaters/insert				ring
+/gate/panel/ring/setRepeatNumber			2
+# =====================================================================
+# Attach Volumes & Sensitive Detectors
+# =====================================================================
+/gate/systems/cylindricalPET/rsector/attach		panel
+/gate/systems/cylindricalPET/module/attach		pixel
+/gate/pixel/attachCrystalSD

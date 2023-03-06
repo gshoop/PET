@@ -1,0 +1,6 @@
+/vis/open OGLSX
+/vis/viewer/set/style wireframe
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 50 60
+/vis/viewer/update
+/vis/viewer/refresh
