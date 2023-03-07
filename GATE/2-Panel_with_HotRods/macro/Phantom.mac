@@ -1,0 +1,59 @@
+#----------------------------
+# Phantom geometry
+#----------------------------
+/gate/world/daughters/name HeadNeck
+/gate/world/daughters/insert cylinder
+/gate/HeadNeck/setMaterial Water
+/gate/HeadNeck/geometry/setRmax 55. mm
+/gate/HeadNeck/geometry/setHeight 126. mm
+/gate/HeadNeck/placement/setTranslation 0. 0. 0. mm
+/gate/HeadNeck/vis/setColor grey
+/gate/HeadNeck/vis/forceSolid
+/gate/HeadNeck/vis/setVisible 1
+
+/gate/HeadNeck/daughters/name Rod1_Cold
+/gate/HeadNeck/daughters/insert cylinder
+/gate/Rod1_Cold/setMaterial Water
+/gate/Rod1_Cold/geometry/setRmax 0.5 mm
+/gate/Rod1_Cold/geometry/setHeight 126. mm
+/gate/Rod1_Cold/placement/setTranslation 20. 0. 0. mm
+/gate/Rod1_Cold/vis/setColor red
+/gate/Rod1_Cold/vis/forceSolid
+/gate/Rod1_Cold/vis/setVisible 1
+
+/gate/HeadNeck/daughters/name Rod2_Cold
+/gate/HeadNeck/daughters/insert cylinder
+/gate/Rod2_Cold/setMaterial Water
+/gate/Rod2_Cold/geometry/setRmax 1. mm
+/gate/Rod2_Cold/geometry/setHeight 126. mm
+/gate/Rod2_Cold/placement/setTranslation 0. 20. 0. mm
+/gate/Rod2_Cold/vis/setColor red
+/gate/Rod2_Cold/vis/forceSolid
+/gate/Rod2_Cold/vis/setVisible 1
+
+/gate/HeadNeck/daughters/name Rod3_Cold
+/gate/HeadNeck/daughters/insert cylinder
+/gate/Rod3_Cold/setMaterial Water
+/gate/Rod3_Cold/geometry/setRmax 1.5 mm
+/gate/Rod3_Cold/geometry/setHeight 126. mm
+/gate/Rod3_Cold/placement/setTranslation -20. 0. 0. mm
+/gate/Rod3_Cold/vis/setColor red
+/gate/Rod3_Cold/vis/forceSolid
+/gate/Rod3_Cold/vis/setVisible 1
+
+/gate/HeadNeck/daughters/name Rod4_Cold
+/gate/HeadNeck/daughters/insert cylinder
+/gate/Rod4_Cold/setMaterial Water
+/gate/Rod4_Cold/geometry/setRmax 2. mm
+/gate/Rod4_Cold/geometry/setHeight 126. mm
+/gate/Rod4_Cold/placement/setTranslation 0. -20. 0. mm
+/gate/Rod4_Cold/vis/setColor red
+/gate/Rod4_Cold/vis/forceSolid
+/gate/Rod4_Cold/vis/setVisible 1
+
+#----------------------------
+# Define a sensitive phantom 
+#----------------------------
+/gate/HeadNeck/attachPhantomSD
+/gate/geometry/rebuild
+

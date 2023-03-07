@@ -1,0 +1,24 @@
+#----------------------------
+# Physics list 
+#----------------------------
+/gate/physics/addPhysicsList emstandard_opt3
+
+/gate/physics/removeProcess Bremsstrahlung
+/gate/physics/removeProcess RayleighScattering
+
+#/gate/physics/processList Enabled
+#/gate/physics/processList Initialized  
+
+#----------------------------
+# Cut 
+#----------------------------
+
+#/gate/physics/Gamma/SetCutInRegion      pixel 0.5 mm
+#/gate/physics/Electron/SetCutInRegion   pixel 0.5 mm
+#/gate/physics/Positron/SetCutInRegion   pixel 0.5 mm
+
+# Cut in phantom
+/gate/physics/Gamma/SetCutInRegion      HeadNeck 1.0 mm
+/gate/physics/Electron/SetCutInRegion   HeadNeck 1.0 mm
+/gate/physics/Positron/SetCutInRegion   HeadNeck 1.0 mm
+

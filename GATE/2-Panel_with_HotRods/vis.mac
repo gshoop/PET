@@ -1,0 +1,36 @@
+#----------------------------
+# Visualisation
+#----------------------------
+/control/execute ./macro/Visualisation_on.mac
+/vis/enable
+
+#----------------------------
+# Verbosity 
+#----------------------------
+/control/execute ./macro/Verbosity.mac
+
+#----------------------------
+# Material
+#----------------------------
+/gate/geometry/setMaterialDatabase ./GateMaterials.db
+
+#----------------------------
+# World
+#----------------------------
+/gate/world/geometry/setXLength     1000. mm
+/gate/world/geometry/setYLength     1000. mm
+/gate/world/geometry/setZLength     1000. mm
+/gate/world/setMaterial             Air
+/gate/world/vis/setVisible          false
+/gate/world/vis/setColor            white
+/gate/world/vis/forceWireframe
+
+#----------------------------
+# Scanner Geometry
+#----------------------------
+/control/execute ./macro/Geometry.mac
+
+#----------------------------
+# Phantom Geometry
+#----------------------------
+/control/execute ./macro/Phantom.mac

@@ -1,0 +1,75 @@
+/gate/source/addSource bkg
+/gate/source/bkg/setActivity 6825282. becquerel 
+/gate/source/bkg/gps/particle e+ 
+/gate/source/bkg/setForcedUnstableFlag true
+/gate/source/bkg/setForcedHalfLife 6586.2 s
+/gate/source/bkg/gps/energytype Fluor18
+/gate/source/bkg/gps/type Volume
+/gate/source/bkg/gps/shape Cylinder 
+/gate/source/bkg/gps/radius 55. mm
+/gate/source/bkg/gps/halfz 63. mm
+/gate/source/bkg/gps/angtype iso
+/gate/source/bkg/gps/centre 0. 0. 0. mm
+/gate/source/bkg/gps/Forbid Rod1_Cold
+/gate/source/bkg/gps/Forbid Rod2_Cold
+/gate/source/bkg/gps/Forbid Rod3_Cold
+/gate/source/bkg/gps/Forbid Rod4_Cold
+#/gate/source/bkg/visualize 1000 green 2
+
+/gate/source/addSource Rod1_Hot
+/gate/source/Rod1_Hot/setActivity 4513. becquerel 
+/gate/source/Rod1_Hot/gps/particle e+ 
+/gate/source/Rod1_Hot/setForcedUnstableFlag true
+/gate/source/Rod1_Hot/setForcedHalfLife 6586.2 s
+/gate/source/Rod1_Hot/gps/energytype Fluor18
+/gate/source/Rod1_Hot/gps/type Volume
+/gate/source/Rod1_Hot/gps/shape Cylinder 
+/gate/source/Rod1_Hot/gps/radius 0.5 mm
+/gate/source/Rod1_Hot/gps/halfz 63. mm
+/gate/source/Rod1_Hot/gps/angtype iso
+/gate/source/Rod1_Hot/gps/centre 20. 0. 0. mm
+#/gate/source/Rod1_Hot/visualize 1000 green 2
+
+/gate/source/addSource Rod2_Hot
+/gate/source/Rod2_Hot/setActivity 18050. becquerel 
+/gate/source/Rod2_Hot/gps/particle e+ 
+/gate/source/Rod2_Hot/setForcedUnstableFlag true
+/gate/source/Rod2_Hot/setForcedHalfLife 6586.2 s
+/gate/source/Rod2_Hot/gps/energytype Fluor18
+/gate/source/Rod2_Hot/gps/type Volume
+/gate/source/Rod2_Hot/gps/shape Cylinder 
+/gate/source/Rod2_Hot/gps/radius 1. mm
+/gate/source/Rod2_Hot/gps/halfz 63. mm
+/gate/source/Rod2_Hot/gps/angtype iso
+/gate/source/Rod2_Hot/gps/centre 0. 20. 0. mm
+#/gate/source/Rod2_Hot/visualize 1000 green 2
+
+/gate/source/addSource Rod3_Hot
+/gate/source/Rod3_Hot/setActivity 40613. becquerel 
+/gate/source/Rod3_Hot/gps/particle e+ 
+/gate/source/Rod3_Hot/setForcedUnstableFlag true
+/gate/source/Rod3_Hot/setForcedHalfLife 6586.2 s
+/gate/source/Rod3_Hot/gps/energytype Fluor18
+/gate/source/Rod3_Hot/gps/type Volume
+/gate/source/Rod3_Hot/gps/shape Cylinder 
+/gate/source/Rod3_Hot/gps/radius 1.5 mm
+/gate/source/Rod3_Hot/gps/halfz 63. mm
+/gate/source/Rod3_Hot/gps/angtype iso
+/gate/source/Rod3_Hot/gps/centre -20. 0. 0. mm
+#/gate/source/Rod3_Hot/visualize 1000 green 2
+
+/gate/source/addSource Rod4_Hot
+/gate/source/Rod4_Hot/setActivity 72201. becquerel 
+/gate/source/Rod4_Hot/gps/particle e+ 
+/gate/source/Rod4_Hot/setForcedUnstableFlag true
+/gate/source/Rod4_Hot/setForcedHalfLife 6586.2 s
+/gate/source/Rod4_Hot/gps/energytype Fluor18
+/gate/source/Rod4_Hot/gps/type Volume
+/gate/source/Rod4_Hot/gps/shape Cylinder 
+/gate/source/Rod4_Hot/gps/radius 2 mm
+/gate/source/Rod4_Hot/gps/halfz 63. mm
+/gate/source/Rod4_Hot/gps/angtype iso
+/gate/source/Rod4_Hot/gps/centre 0. -20. 0. mm
+#/gate/source/Rod4_Hot/visualize 1000 green 2
+
+/gate/source/list

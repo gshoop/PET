@@ -1,0 +1,74 @@
+#-----------------------------------------
+# Detctor type: cylindricalPET
+#-----------------------------------------
+/gate/world/daughters/name      cylindricalPET
+/gate/world/daughters/insert    cylinder
+/gate/cylindricalPET/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/cylindricalPET/geometry/setRmin   95. mm
+/gate/cylindricalPET/geometry/setRmax   180. mm
+/gate/cylindricalPET/geometry/setHeight 200. mm
+/gate/cylindricalPET/setMaterial Air
+/gate/cylindricalPET/vis/setVisible 1 
+/gate/cylindricalPET/vis/forceWireframe
+/gate/cylindricalPET/vis/setColor white
+/gate/geometry/rebuild
+
+#-----------------------------------------
+# rsector, panel, depth=1
+#-----------------------------------------
+/gate/cylindricalPET/daughters/name panel
+/gate/cylindricalPET/daughters/insert box
+/gate/panel/placement/setTranslation 70. 0.0 0.0 mm # panel distance / 2 + crystal length / 2
+/gate/panel/geometry/setXLength 40. mm
+/gate/panel/geometry/setYLength 200. mm
+/gate/panel/geometry/setZLength 150. mm
+/gate/panel/setMaterial Air
+/gate/panel/vis/setColor yellow
+/gate/panel/vis/forceWireframe
+/gate/geometry/rebuild
+
+#-----------------------------------------
+# module, pixel, depth=2, sensitive detector
+#-----------------------------------------
+/gate/panel/daughters/name pixel
+/gate/panel/daughters/insert box
+/gate/pixel/geometry/setXLength 39.999 mm
+/gate/pixel/geometry/setYLength 39.999 mm
+/gate/pixel/geometry/setZLength 4.999 mm
+/gate/pixel/setMaterial CZT
+/gate/pixel/vis/setColor green
+/gate/pixel/vis/forceSolid
+/gate/geometry/rebuild
+
+
+############
+## REPEAT ##
+############
+
+#-----------------------------------------
+# Repeat pixel  
+#-----------------------------------------
+/gate/pixel/repeaters/insert cubicArray
+/gate/pixel/cubicArray/setRepeatNumberX 1
+/gate/pixel/cubicArray/setRepeatNumberY 5 
+/gate/pixel/cubicArray/setRepeatNumberZ 30
+/gate/pixel/cubicArray/setRepeatVector 0. 40. 5. mm  
+/gate/geometry/rebuild
+
+#-----------------------------------------
+# Repeat panel 
+#-----------------------------------------
+/gate/panel/repeaters/insert ring
+/gate/panel/ring/setRepeatNumber 2
+/gate/geometry/rebuild
+
+#-----------------------------------------
+# Attach volumns to a system 
+#-----------------------------------------
+/gate/systems/cylindricalPET/rsector/attach panel
+/gate/systems/cylindricalPET/module/attach pixel 
+
+#-----------------------------------------
+# Define sensitive detector 
+#-----------------------------------------
+/gate/pixel/attachCrystalSD
