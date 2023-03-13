@@ -26,7 +26,7 @@
 # =====================================================================
 /gate/cylindricalPET/daughters/name 			panel
 /gate/cylindricalPET/daughters/insert			box
-/gate/panel/placement/setTranslation			110. 0.0 0.0 mm
+/gate/panel/placement/setTranslation			65. 0.0 0.0 mm
 /gate/panel/geometry/setXLength				40. mm
 /gate/panel/geometry/setYLength				150. mm
 /gate/panel/geometry/setZLength				200. mm
