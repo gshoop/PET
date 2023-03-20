@@ -69,7 +69,7 @@
 # ASCII output
 /gate/output/ascii/enable
 /gate/output/ascii/setFileName                ./output/partial_
-/gate/output/ascii/setOutFileHitsFlag         0
+/gate/output/ascii/setOutFileHitsFlag         1
 /gate/output/ascii/setOutFileSinglesFlag      0
 /gate/output/ascii/setOutFileCoincidencesFlag 1
 # Mask Columns                                          1                   2                   3                   4
@@ -77,9 +77,9 @@
 /gate/output/ascii/setCoincidenceMask 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
 
 # ROOT Output format
-/gate/output/root/disable
+/gate/output/root/enable
 /gate/output/root/setFileName             ./output/partial_
-/gate/output/root/setRootHitFlag          0
+/gate/output/root/setRootHitFlag          1
 /gate/output/root/setRootSinglesFlag      0
 /gate/output/root/setRootCoincidencesFlag 1
 
