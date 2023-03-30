@@ -19,5 +19,5 @@ for file in files:
         file_list.append(file)
 
 for file in file_list:
-    command2 = 'python reorgcpp.py ' + file
+    command2 = 'python3 reorgcpp.py ' + file
     os.system(command2)
