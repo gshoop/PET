@@ -90,10 +90,7 @@ Repeating the CZT blocks in a ring for a total of 23 detector blocks around the 
 /gate/pixel/attachCrystalSD
 ```
 
-# Phantom
-![image](https://user-images.githubusercontent.com/44107373/219134199-d41106b5-dc50-49a6-906f-eeae6f67599c.png)
+# Sources
 
-```
-# PHANTOM
-
-```
+We would like to use Zirconium-89 (89Zr) for positron emission. 89Zr has a half-life of approximately 3.27 days or 78.48 hours. Zr decays by positron emission at a rate of 23% with average kinetic energy
+of 395 keV. There are also gamma emissions at 99% with energy 909 keV.
