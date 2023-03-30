@@ -1,2 +1,4 @@
 *.dat
 *.root
+*.lst
+*.binary
