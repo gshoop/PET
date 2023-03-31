@@ -1,7 +1,18 @@
 # Zirconium-89 ion source with half-life of 78.41 hrs
-/gate/source/addSource point
-/gate/source/point/setActivity                  1.0 MBq
-/gate/source/point/gps/particle                 ion
-/gate/source/point/gps/ion                      40 89 0 0
+/gate/source/addSource                          point
+/gate/source/point/gps/particle                 gamma
+/gate/source/point/gps/monoenergy               395. keV
 /gate/source/point/setForcedUnstableFlag        true
-/gate/source/point/setForcedHalfLife            282276 s
+/gate/source/point/setForcedHalfLife            282276 s    # 78.41 hrs or 3.267 days
+/gate/source/point/setActivity                  40.0 MBq    # Literature says activity typically used for Zr-89 can range from 37-74 MBq
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Cannot get Zr-89 to work as defined below. Defined above as gamma particle.
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#/gate/source/point/gps/particle                 ion
+#/gate/source/point/gps/ion                      40 89 0 0
+#/gate/source/point/gps/monoenergy               0. keV
+#/gate/source/point/setActivity                  20.0 MBq
+#/gate/source/point/setForcedUnstableFlag        true
+#/gate/source/point/setForcedHalfLife            282276 s
+#/gate/source/point/useDefaultHalfLife
