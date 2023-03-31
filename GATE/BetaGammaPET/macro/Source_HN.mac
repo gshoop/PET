@@ -1,5 +1,7 @@
-/gate/source/addSource point Extended
-/gate/source/point/setType pPs
-/gate/source/point/setEnableDeexcitation true
-/gate/source/point/setPromptGammaEnergy 1.0 MeV
-/gate/source/point/setActivity 74000000. becquerel
+# Zirconium-89 ion source with half-life of 78.41 hrs
+/gate/source/addSource point
+/gate/source/point/setActivity                  1.0 MBq
+/gate/source/point/gps/particle                 ion
+/gate/source/point/gps/ion                      40 89 0 0
+/gate/source/point/setForcedUnstableFlag        true
+/gate/source/point/setForcedHalfLife            282276 s
