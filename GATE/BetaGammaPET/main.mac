@@ -7,7 +7,7 @@
 #----------------------------
 # Verbosity 
 #----------------------------
-/control/execute ./macro/Verbosity.mac
+#/control/execute ./macro/Verbose.mac
 
 #----------------------------
 # Material
@@ -70,9 +70,9 @@
 # ASCII output
 /gate/output/ascii/enable
 /gate/output/ascii/setFileName                ./output/partial_
-/gate/output/ascii/setOutFileHitsFlag         0
-/gate/output/ascii/setOutFileSinglesFlag      0
-/gate/output/ascii/setOutFileCoincidencesFlag 1
+/gate/output/ascii/setOutFileHitsFlag         1
+/gate/output/ascii/setOutFileSinglesFlag      1
+/gate/output/ascii/setOutFileCoincidencesFlag 0
 # Mask Columns                                          1                   2                   3                   4
 # Mask Columns                        1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6
 /gate/output/ascii/setCoincidenceMask 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
@@ -82,7 +82,7 @@
 /gate/output/root/setFileName             ./output/partial_
 /gate/output/root/setRootHitFlag          0
 /gate/output/root/setRootSinglesFlag      0
-/gate/output/root/setRootCoincidencesFlag 1
+/gate/output/root/setRootCoincidencesFlag 0
 
 #----------------------------
 # Randomize 

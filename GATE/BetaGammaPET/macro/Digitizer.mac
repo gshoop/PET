@@ -10,7 +10,7 @@
 # =================================================================
 /gate/digitizer/Singles/insert				blurring
 /gate/digitizer/Singles/blurring/setResolution		0.08
-/gate/digitizer/Singles/blurring/setEnergyOfReference	511. keV
+/gate/digitizer/Singles/blurring/setEnergyOfReference	396.9 keV
 
 # =================================================================
 # Threshold & Uphold
@@ -18,7 +18,7 @@
 /gate/digitizer/Singles/insert				thresholder
 /gate/digitizer/Singles/thresholder/setThreshold	100. keV
 /gate/digitizer/Singles/insert				upholder
-/gate/digitizer/Singles/upholder/setUphold		800. keV
+/gate/digitizer/Singles/upholder/setUphold		900. keV
 
 # =================================================================
 # Time Resolution
