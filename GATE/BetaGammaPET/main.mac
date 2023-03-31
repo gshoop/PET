@@ -1,89 +1,103 @@
-#=====================================================
-# Verbosity
-#=====================================================
-#/control/execute ./Verbose.mac
+#----------------------------
+# Visualisation
+#----------------------------
+/control/execute ./macro/Visualisation.mac
+/vis/disable
 
+#----------------------------
+# Verbosity 
+#----------------------------
+/control/execute ./macro/Verbosity.mac
 
-#=====================================================
+#----------------------------
 # Material
-#=====================================================
-/gate/geometry/setMaterialDatabase    ./GateMaterials.db
+#----------------------------
+/gate/geometry/setMaterialDatabase ./GateMaterials.db
 
-#=====================================================
+#----------------------------
 # World
-#=====================================================
-/gate/world/geometry/setXLength      	60. cm
-/gate/world/geometry/setYLength      	60. cm
-/gate/world/geometry/setZLength		60. cm
-/gate/world/setMaterial 		Vacuum
-/gate/world/vis/setVisible		true
-/gate/world/vis/setColor		white
+#----------------------------
+/gate/world/geometry/setXLength     1000. mm
+/gate/world/geometry/setYLength     1000. mm
+/gate/world/geometry/setZLength     1000. mm
+/gate/world/setMaterial             Air
+/gate/world/vis/setVisible          true
+/gate/world/vis/setColor            white
 /gate/world/vis/forceWireframe
 
-#=====================================================
-# Geometry
-#=====================================================
-/control/execute ./Geometry.mac
+#----------------------------
+# Scanner Geometry
+#----------------------------
+/control/execute ./macro/Geometry.mac
 
-#=====================================================
-# Phantom
-#=====================================================
-/control/execute ./Phantom_HN.mac
+#----------------------------
+# Phantom Geometry
+#----------------------------
+#no phantom
+#/control/execute ./macro/Phantom.mac
 
-#=====================================================
-# Visualization Check
-#=====================================================
-#/control/execute ./Visualization.mac
-
-#=====================================================
+#----------------------------
 # Physics
-#=====================================================
-#/control/execute ./egammaStandardPhys.mac
-/control/execute ./Physics.mac
+#----------------------------
+/control/execute ./macro/Physics.mac
 
-#=====================================================
-# Actor
-#=====================================================
-/gate/actor/addActor	SimulationStatisticActor stat
-/gate/actor/stat/save	./output/stat.txt
+#----------------------------
+# Actors
+#----------------------------
+/gate/actor/addActor               SimulationStatisticActor stat
+/gate/actor/stat/save              ./output/stat.txt
 /gate/actor/stat/saveEveryNSeconds 60
 
-#=====================================================
-# Initialize
-#=====================================================
+#----------------------------
+# Inilization
+#----------------------------
 /gate/run/initialize
 
-#=====================================================
+#----------------------------
 # Digitizer
-#=====================================================
-/control/execute ./Digitizer.mac
+#----------------------------
+/control/execute ./macro/Digitizer.mac
 
-#=====================================================
+#----------------------------
 # Source
-#=====================================================
-/control/execute ./Source_HN.mac
-/gate/source/list
+#----------------------------
+/control/execute ./macro/Source_HN.mac
 
-/gate/output/ascii/disable
-/gate/output/ascii/setFileName ./output/simple_
-/gate/output/ascii/setOutFileHitsFlag 1
-/gate/output/ascii/setOutFileSinglesFlag 0
-/gate/output/ascii/setOutFileCoincidencesFlag 0
+#----------------------------
+# Data output
+#----------------------------
 
-/gate/output/root/enable
-/gate/output/root/setFileName ./output/simple_
-/gate/output/root/setRootHitFlag 1
-/gate/output/root/setRootSinglesFlag 0
+# ASCII output
+/gate/output/ascii/enable
+/gate/output/ascii/setFileName                ./output/partial_
+/gate/output/ascii/setOutFileHitsFlag         0
+/gate/output/ascii/setOutFileSinglesFlag      0
+/gate/output/ascii/setOutFileCoincidencesFlag 1
+# Mask Columns                                          1                   2                   3                   4
+# Mask Columns                        1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6
+/gate/output/ascii/setCoincidenceMask 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+
+# ROOT Output format
+/gate/output/root/disable
+/gate/output/root/setFileName             ./output/partial_
+/gate/output/root/setRootHitFlag          0
+/gate/output/root/setRootSinglesFlag      0
 /gate/output/root/setRootCoincidencesFlag 1
 
+#----------------------------
+# Randomize 
+#----------------------------
+# MersenneTwister
 /gate/random/setEngineName MersenneTwister
 /gate/random/setEngineSeed auto
 
+#----------------------------
+# Acquisition
+#----------------------------
 /gate/application/setTimeSlice 1 s
 /gate/application/setTimeStart 0 s
-/gate/application/setTimeStop 1 s
+/gate/application/setTimeStop  1 s
 /gate/application/startDAQ
-
 
 
 
