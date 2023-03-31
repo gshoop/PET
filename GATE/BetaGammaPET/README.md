@@ -92,7 +92,8 @@ Repeating the CZT blocks in a ring for a total of 23 detector blocks around the 
 
 # Ring Diameter Optimization
 The minimum ring size for the system that will use edge-on construction with 4x4x0.5 cm CZT crystals can be seen as a n-sided (n=23) regular polygon. The minimum ring size we can use can be calculated
-from r = a/(2*tan(pi/n), where a=4 cm. This gives us a minimum ring radius of 14.55 cm. Many commercial brain/head PET systems have configurations with radii of 25 cm.
+from r = a/(2*tan(pi/n), where a=4 cm. This gives us a minimum ring radius of 14.55 cm. Many commercial brain/head PET systems have configurations with radii of 25 cm. In this case we made the ring radius
+to be approximately 16 cm where we can see a few mm of spacing between each detector block in the ring.
 
 # Sources
 
