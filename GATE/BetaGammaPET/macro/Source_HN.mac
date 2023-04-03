@@ -24,9 +24,9 @@
 /gate/source/addSource                          point Extended
 /gate/source/point/setActivity                  20.0 MBq
 /gate/source/point/setForcedUnstableFlag        true
-/gate/source/point/setForcedHalfLife            282276
+/gate/source/point/setForcedHalfLife            282276 s
 /gate/source/point/setType                      pPs
 /gate/source/point/setEnableDeexcitation        true
 /gate/source/point/setPromptGammaEnergy         909. keV
 /gate/source/point/setPositroniumFraction       pPs 0.28
-/gate/source/point/gps/monoenergy               395. keV
+/gate/source/point/gps/ene/mono                 395. keV

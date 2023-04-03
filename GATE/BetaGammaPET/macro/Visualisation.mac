@@ -8,4 +8,5 @@
 /tracking/storeTrajectory 0
 /vis/scene/endOfEventAction accumulate
 /vis/scene/add/hits
+/vis/scene/add/trajectories
 /vis/scene/add/axes #Add global axis
