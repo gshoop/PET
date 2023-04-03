@@ -1,8 +1,7 @@
 #----------------------------
 # Visualisation
 #----------------------------
-/control/execute ./macro/Visualisation.mac
-/vis/disable
+#/vis/disable
 
 #----------------------------
 # Verbosity 
@@ -29,6 +28,8 @@
 # Scanner Geometry
 #----------------------------
 /control/execute ./macro/Geometry.mac
+/control/execute ./macro/Visualisation.mac
+
 
 #----------------------------
 # Phantom Geometry
