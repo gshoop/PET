@@ -1,5 +1,5 @@
 # Zirconium-89 ion source with half-life of 78.41 hrs
-#/gate/source/addSource                          point
+/gate/source/addSource                          point
 
 #/gate/source/point/gps/particle                 e+
 #/gate/source/point/gps/energytype               Mono
@@ -13,20 +13,22 @@
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Cannot get Zr-89 to work as defined below. Defined above as gamma particle.
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#/gate/source/point/gps/particle                 ion
-#/gate/source/point/gps/ion                      40 89 0 0
-#/gate/source/point/gps/monoenergy               0. keV
+/gate/source/point/gps/particle                 ion
+/gate/source/point/gps/ion                      40 89 0 0
+/gate/source/point/gps/monoenergy               0. keV
+/gate/source/point/setActivity                  20.0 kBq
+/gate/source/point/setForcedUnstableFlag        true
+#/gate/source/point/setForcedHalfLife            282276 s
+/gate/source/point/useDefaultHalfLife
+/gate/source/point/setEnableDeexcitation        true
+/gate/source/point/setPromptGammaEnergy         909. keV
+
+#/gate/source/addSource                          point Extended
 #/gate/source/point/setActivity                  20.0 MBq
 #/gate/source/point/setForcedUnstableFlag        true
 #/gate/source/point/setForcedHalfLife            282276 s
-#/gate/source/point/useDefaultHalfLife
-
-/gate/source/addSource                          point Extended
-/gate/source/point/setActivity                  20.0 MBq
-/gate/source/point/setForcedUnstableFlag        true
-/gate/source/point/setForcedHalfLife            282276 s
-/gate/source/point/setType                      pPs
-/gate/source/point/setEnableDeexcitation        true
-/gate/source/point/setPromptGammaEnergy         909. keV
-/gate/source/point/setPositroniumFraction       pPs 0.28
-/gate/source/point/gps/ene/mono                 395. keV
+#/gate/source/point/setType                      pPs
+#/gate/source/point/setEnableDeexcitation        true
+#/gate/source/point/setPromptGammaEnergy         909. keV
+#/gate/source/point/setPositroniumFraction       pPs 0.28
+#/gate/source/point/gps/ene/mono                 395. keV
