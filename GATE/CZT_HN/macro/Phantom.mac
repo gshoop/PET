@@ -4,7 +4,7 @@
 /gate/world/daughters/name HeadNeck
 /gate/world/daughters/insert cylinder
 /gate/HeadNeck/setMaterial Water
-/gate/HeadNeck/geometry/setRmax 55. mm
+/gate/HeadNeck/geometry/setRmax 40. mm
 /gate/HeadNeck/geometry/setHeight 126. mm
 /gate/HeadNeck/placement/setTranslation 0. 0. 0. mm
 /gate/HeadNeck/vis/setColor grey
