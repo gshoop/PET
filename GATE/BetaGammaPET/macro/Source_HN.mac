@@ -25,6 +25,7 @@
 
 /gate/source/addSource                          point Extended
 /gate/source/point/setActivity                  20.0 MBq
+/gate/source/point/gps/pos/centre               0. 0. 0. cm
 /gate/source/point/setForcedUnstableFlag        true
 /gate/source/point/setForcedHalfLife            282276 s
 /gate/source/point/setType                      pPs

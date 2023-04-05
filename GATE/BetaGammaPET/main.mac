@@ -28,7 +28,7 @@
 # Scanner Geometry
 #----------------------------
 /control/execute ./macro/Geometry.mac
-/control/execute ./macro/Visualisation.mac
+#/control/execute ./macro/Visualisation.mac
 
 
 #----------------------------
@@ -85,6 +85,10 @@
 /gate/output/root/setRootHitFlag          1
 /gate/output/root/setRootSinglesFlag      0
 /gate/output/root/setRootCoincidencesFlag 0
+
+/gate/output/tree/enable
+/gate/output/tree/addFileName             ./output/pet.root
+/gate/output/tree/hits/enable
 
 #----------------------------
 # Randomize 
