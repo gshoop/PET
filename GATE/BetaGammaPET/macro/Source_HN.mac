@@ -1,4 +1,14 @@
 # Zirconium-89 ion source with half-life of 78.41 hrs
+
+# -------------------------------------------------------------
+# Source Geometry
+# -------------------------------------------------------------
+/gate/source/addSource				point Extended
+/gate/source/point/gps/type			Volume
+/gate/source/point/gps/shape			Sphere
+/gate/source/point/gps/radius			0.1 mm
+/gate/source/point/gps/angtype			iso
+
 #/gate/source/addSource                          point
 
 #/gate/source/point/gps/particle                 e+
@@ -23,13 +33,20 @@
 #/gate/source/point/setEnableDeexcitation        true
 #/gate/source/point/setPromptGammaEnergy         909. keV
 
-/gate/source/addSource                          point Extended
-/gate/source/point/setActivity                  20.0 MBq
-/gate/source/point/gps/pos/centre               0. 0. 0. cm
-/gate/source/point/setForcedUnstableFlag        true
-/gate/source/point/setForcedHalfLife            282276 s
-/gate/source/point/setType                      pPs
-/gate/source/point/setEnableDeexcitation        true
-/gate/source/point/setPromptGammaEnergy         909. keV
+#/gate/source/addSource                          point Extended
+#/gate/source/point/setActivity                  40 MBq
+#/gate/source/point/gps/pos/centre               0. 0. 0. cm
+#/gate/source/point/setForcedUnstableFlag        true
+#/gate/source/point/setForcedHalfLife            282276 s
+#/gate/source/point/setType                      pPs
+#/gate/source/point/setEnableDeexcitation        true
+#/gate/source/point/setPromptGammaEnergy         909. keV
 #/gate/source/point/setPositroniumFraction       pPs 0.28
 #/gate/source/point/gps/ene/mono                 395. keV
+
+#/gate/source/addSource                          point Extended
+/gate/source/point/setActivity                  20 MBq
+/gate/source/point/gps/pos/centre               0. 0. 0. cm
+/gate/source/point/setType                      sg
+/gate/source/point/setEnableDeexcitation        false
+/gate/source/point/setEmissionEnergy            909 keV

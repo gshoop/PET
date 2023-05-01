@@ -49,6 +49,16 @@
 /gate/actor/stat/save              ./output/stat.txt
 /gate/actor/stat/saveEveryNSeconds 60
 
+/gate/actor/addActor                                EnergySpectrumActor energyActor
+/gate/actor/energyActor/save                        ./output/energy.root
+/gate/actor/energyActor/energySpectrum/setEmin      0. eV
+/gate/actor/energyActor/energySpectrum/setEmax      1. MeV
+/gate/actor/energyActor/energySpectrum/setNumberOfBins  1000
+/gate/actor/energyActor/enableEdepHisto                 true
+/gate/actor/energyActor/enableEdepTimeHisto             true
+/gate/actor/energyActor/enableEdepTrackHisto            true
+/gate/actor/energyActor/enableEdepStepHisto             true
+
 #----------------------------
 # Inilization
 #----------------------------
@@ -86,9 +96,10 @@
 /gate/output/root/setRootSinglesFlag      0
 /gate/output/root/setRootCoincidencesFlag 0
 
-/gate/output/tree/enable
-/gate/output/tree/addFileName             ./output/pet.root
+#/gate/output/tree/enable
+#/gate/output/tree/addFileName             ./output/pet.root
 /gate/output/tree/hits/enable
+/gate/output/tree/addFileName               ./output/p.npy
 
 #----------------------------
 # Randomize 

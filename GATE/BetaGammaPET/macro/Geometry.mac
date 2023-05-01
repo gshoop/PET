@@ -6,7 +6,8 @@
 /gate/world/daughters/insert				cylinder
 /gate/cylindricalPET/placement/setTranslation		0.0 0.0 0.0 cm
 /gate/cylindricalPET/geometry/setRmin			16.0 cm
-/gate/cylindricalPET/geometry/setRmax			20.2 cm
+#/gate/cylindricalPET/geometry/setRmax			20.2 cm
+/gate/cylindricalPET/geometry/setRmax			32.2 cm
 /gate/cylindricalPET/geometry/setHeight			15.0 cm
 /gate/cylindricalPET/setMaterial			Vacuum
 /gate/cylindricalPET/vis/setColor			cyan
@@ -17,8 +18,10 @@
 # =====================================================================
 /gate/cylindricalPET/daughters/name 			block
 /gate/cylindricalPET/daughters/insert			box
-/gate/block/placement/setTranslation			18.0 0.0 0.0 cm
-/gate/block/geometry/setXLength				4.0 cm
+#/gate/block/placement/setTranslation			18.0 0.0 0.0 cm
+/gate/block/placement/setTranslation			24.0 0.0 0.0 cm
+#/gate/block/geometry/setXLength				4.0 cm
+/gate/block/geometry/setXLength				8.0 cm
 /gate/block/geometry/setYLength				4.0 cm
 /gate/block/geometry/setZLength				15.0 cm
 /gate/block/setMaterial					Vacuum
@@ -29,8 +32,9 @@
 # CZT Crystal (Pixel)
 # =====================================================================
 /gate/block/daughters/name 				pixel
-/gate/block/daughters/insert				box
-/gate/pixel/geometry/setXLength				4.0 cm
+/gate/block/daughters/insert			box
+#/gate/pixel/geometry/setXLength				4.0 cm
+/gate/pixel/geometry/setXLength				16.0 cm
 /gate/pixel/geometry/setYLength				4.0 cm
 /gate/pixel/geometry/setZLength				0.5 cm
 /gate/pixel/setMaterial					CZT
