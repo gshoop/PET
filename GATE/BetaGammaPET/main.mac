@@ -41,6 +41,7 @@
 # Physics
 #----------------------------
 /control/execute ./macro/Physics.mac
+#/control/execute ./macro/egammaStandardPhys.mac
 
 #----------------------------
 # Actors
@@ -83,7 +84,7 @@
 /gate/output/ascii/enable
 /gate/output/ascii/setFileName                  ./output/pet
 /gate/output/ascii/setOutFileHitsFlag           1
-/gate/output/ascii/setOutFileSinglesFlag        0
+/gate/output/ascii/setOutFileSinglesFlag        1
 /gate/output/ascii/setOutFileCoincidencesFlag   0
 #                                               0                 1                   2
 # Columns                                       1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
@@ -93,7 +94,7 @@
 /gate/output/root/enable
 /gate/output/root/setFileName             ./output/pet
 /gate/output/root/setRootHitFlag          1
-/gate/output/root/setRootSinglesFlag      0
+/gate/output/root/setRootSinglesFlag      1
 /gate/output/root/setRootCoincidencesFlag 0
 
 #/gate/output/tree/enable
