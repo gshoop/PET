@@ -1,8 +1,14 @@
 /gate/physics/addPhysicsList emstandard_opt3
 
-/gate/physics/removeProcess Bremsstrahlung
-/gate/physics/removeProcess RayleighScattering
+#/gate/physics/removeProcess Bremsstrahlung
+#/gate/physics/removeProcess RayleighScattering
+#/gate/physics/removeProcess ElectronIonization e-
 #/gate/physics/removeProcess ElectronIonisation
 
-/gate/physics/processList Enabled
-/gate/physics/processList Initialized
+#/gate/physics/addProcess RadioactiveDecay
+#/gate/physics/addProcess PhotoElectric gamma
+#/gate/physics/processes/PhotoElectric/setModel StandardModel
+
+#/gate/physics/processList Enabled
+#/gate/physics/processList Initialized
+/process/em/verbose	0

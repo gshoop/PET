@@ -3,20 +3,20 @@
 # -------------------------------------------------------------
 # Source Geometry
 # -------------------------------------------------------------
-#/gate/source/addSource				point Extended
+#/gate/source/addSource				point
 #/gate/source/point/gps/type			Volume
 #/gate/source/point/gps/shape			Sphere
 #/gate/source/point/gps/radius			0.1 mm
 #/gate/source/point/gps/angtype			iso
 
-/gate/source/addSource twogamma
-/gate/source/twogamma/setActivity 37000. becquerel 
-/gate/source/twogamma/setType backtoback
-/gate/source/twogamma/gps/particle gamma
-/gate/source/twogamma/gps/energytype Mono
-/gate/source/twogamma/gps/monoenergy 0.511 MeV
-/gate/source/twogamma/gps/angtype iso
-/gate/source/twogamma/gps/type Point
+#/gate/source/addSource twogamma
+#/gate/source/twogamma/setActivity 37000. becquerel 
+#/gate/source/twogamma/setType backtoback
+#/gate/source/twogamma/gps/particle gamma
+#/gate/source/twogamma/gps/energytype Mono
+#/gate/source/twogamma/gps/monoenergy 0.511 MeV
+#/gate/source/twogamma/gps/angtype iso
+#/gate/source/twogamma/gps/type Point
 
 #/gate/source/addSource                          point
 
@@ -32,6 +32,7 @@
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Cannot get Zr-89 to work as defined below. Defined above as gamma particle.
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#/gate/source/addSource				            point
 #/gate/source/point/gps/particle                 ion
 #/gate/source/point/gps/ion                      40 89 0 0
 #/gate/source/point/gps/monoenergy               0. keV
@@ -54,9 +55,9 @@
 #/gate/source/point/setPositroniumFraction       pPs 0.28
 #/gate/source/point/gps/ene/mono                 511. keV
 
-#/gate/source/addSource                          point Extended
-#/gate/source/point/setActivity                  20 kBq
-#/gate/source/point/gps/pos/centre               0. 0. 0. cm
-#/gate/source/point/setType                      sg
-#/gate/source/point/setEnableDeexcitation        false
-#/gate/source/point/setEmissionEnergy            909 keV
+/gate/source/addSource                          point Extended
+/gate/source/point/setActivity                  20 kBq
+/gate/source/point/gps/pos/centre               0. 0. 0. cm
+/gate/source/point/setType                      sg
+/gate/source/point/setEnableDeexcitation        false
+/gate/source/point/setEmissionEnergy            909 keV
