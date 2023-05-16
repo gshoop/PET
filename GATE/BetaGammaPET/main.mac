@@ -65,12 +65,8 @@
 #----------------------------
 /gate/run/initialize
 #/geometry/test/run
-/gate/physics/Gamma/SetCutInRegion	    cylindricalPET	0.1 mm
-/gate/physics/Electron/SetCutInRegion	cylindricalPET	0.1 mm
-/gate/physics/SetMinKineticEnergyInRegion	cylindricalPET	0.02 keV
-/process/em/applyCuts true
-#/process/em/fluo	false
-/gate/physics/print ./output/physics.txt
+
+#/gate/physics/print ./output/physics.txt
 #----------------------------
 # Digitizer
 #----------------------------

@@ -5,9 +5,13 @@
 #/gate/physics/removeProcess ElectronIonization e-
 #/gate/physics/removeProcess ElectronIonisation
 
-#/gate/physics/addProcess RadioactiveDecay
+/gate/physics/addProcess RadioactiveDecay
 #/gate/physics/addProcess PhotoElectric gamma
 #/gate/physics/processes/PhotoElectric/setModel StandardModel
+
+/gate/physics/Gamma/SetCutInRegion	    world	10 mm
+/gate/physics/Electron/SetCutInRegion	world	10 mm
+/gate/physics/Positron/SetCutInRegion	world	10 mm
 
 #/gate/physics/processList Enabled
 #/gate/physics/processList Initialized
