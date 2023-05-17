@@ -1,0 +1,27 @@
+# Copper-64 ion source with half-life of 12.7 hrs (45720 seconds)
+
+# -------------------------------------------------------------
+# Source Geometry
+# -------------------------------------------------------------
+/gate/source/addSource				    point
+/gate/source/point/gps/type			    Volume
+/gate/source/point/gps/shape			Sphere
+/gate/source/point/gps/radius			0.1 mm
+/gate/source/point/gps/angtype			iso
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Cu-64 as ion source 
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/gate/source/point/gps/particle                 ion
+/gate/source/point/gps/ion                      29 64 0 0           # Z = 29, A = 64
+/gate/source/point/gps/monoenergy               0. keV
+/gate/source/point/setActivity                  7.0 MBq
+/gate/source/point/setForcedUnstableFlag        true
+/gate/source/point/setForcedHalfLife            45720 s
+
+# =================================================================================
+# ---------------------------------------------------------------------------------
+#   NOTE: In Physics.mac file, be sure to add process 'RadioactiveDecay' in order
+#         to get decay physics for ion source.
+#           - /gate/physics/addProcess RadioactiveDecay
+# =================================================================================

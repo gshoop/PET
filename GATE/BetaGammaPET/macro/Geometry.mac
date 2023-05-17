@@ -1,3 +1,14 @@
+# =====================================================================
+#
+# Geometry for system used in Arizona study. Cylindrical PET ring Detector
+# with 23 CZT detectors along the circumference and 30 detectors deep
+# stackecd along the z-axis. Edge-on configuration used with CZT 
+# crystal dimensions of 0.5x4.0x4.0 cm^3.
+# 
+# -- The apothem (inradius) is calculated to be 14.55 cm for a 23 sided
+#    polygon with sides = 4.0 cm. Minimum radius to be set for Rmin can
+#    be 14.56 cm with minimal to no gaps between detectors.
+# ====================================================================
 
 # =====================================================================
 # CylindricalPET
@@ -5,23 +16,20 @@
 /gate/world/daughters/name				cylindricalPET
 /gate/world/daughters/insert				cylinder
 /gate/cylindricalPET/placement/setTranslation		0.0 0.0 0.0 cm
-/gate/cylindricalPET/geometry/setRmin			16.0 cm
-#/gate/cylindricalPET/geometry/setRmax			20.2 cm
-/gate/cylindricalPET/geometry/setRmax			32.2 cm
-/gate/cylindricalPET/geometry/setHeight			15.0 cm
+/gate/cylindricalPET/geometry/setRmin			15.0 cm                 # Seting Rmin to 15.0 cm
+/gate/cylindricalPET/geometry/setRmax			19.2 cm                 # Set Rmax to 4.2 cm to be slightly larger than CZT dimension
+/gate/cylindricalPET/geometry/setHeight			15.0 cm                 # Set's the length in z-axis (30 detectors)*(0.5 cm / detector)
 /gate/cylindricalPET/setMaterial			Vacuum
 /gate/cylindricalPET/vis/setColor			cyan
 /gate/cylindricalPET/vis/forceWireframe
-/gate/cylindricalPET/vis/setVisible			0
+/gate/cylindricalPET/vis/setVisible			1
 # =====================================================================
 # Detector Block
 # =====================================================================
 /gate/cylindricalPET/daughters/name 			block
 /gate/cylindricalPET/daughters/insert			box
-#/gate/block/placement/setTranslation			18.0 0.0 0.0 cm
-/gate/block/placement/setTranslation			24.0 0.0 0.0 cm
-#/gate/block/geometry/setXLength				4.0 cm
-/gate/block/geometry/setXLength				8.0 cm
+/gate/block/placement/setTranslation			17.0 0.0 0.0 cm
+/gate/block/geometry/setXLength				4.0 cm                      # Setting the dimensions for a block of 30 detectors
 /gate/block/geometry/setYLength				4.0 cm
 /gate/block/geometry/setZLength				15.0 cm
 /gate/block/setMaterial					Vacuum
@@ -33,10 +41,9 @@
 # =====================================================================
 /gate/block/daughters/name 				pixel
 /gate/block/daughters/insert			box
-#/gate/pixel/geometry/setXLength				4.0 cm
-/gate/pixel/geometry/setXLength				16.0 cm
-/gate/pixel/geometry/setYLength				4.0 cm
-/gate/pixel/geometry/setZLength				0.5 cm
+/gate/pixel/geometry/setXLength				3.99 cm                     # CZT crystal dimensions of 4x4x0.5 cm^3
+/gate/pixel/geometry/setYLength				3.99 cm
+/gate/pixel/geometry/setZLength				0.499 cm
 /gate/pixel/setMaterial					CZT
 /gate/pixel/vis/setColor				green
 /gate/pixel/vis/forceSolid
@@ -47,13 +54,13 @@
 /gate/pixel/repeaters/insert 				cubicArray
 /gate/pixel/cubicArray/setRepeatNumberX			1
 /gate/pixel/cubicArray/setRepeatNumberY			1
-/gate/pixel/cubicArray/setRepeatNumberZ			30
-/gate/pixel/cubicArray/setRepeatVector			0.0 0.0 0.5 cm
+/gate/pixel/cubicArray/setRepeatNumberZ			30                      # Repeat CZT crystal 30 times in z-axis
+/gate/pixel/cubicArray/setRepeatVector			0.0 0.0 0.499 cm
 # =====================================================================
 # Repeat Ring
 # =====================================================================
 /gate/block/repeaters/insert				ring
-/gate/block/ring/setRepeatNumber			23
+/gate/block/ring/setRepeatNumber			23                          # Create ring of 23 detector blocks
 # =====================================================================
 # Attach Volumes & Sensitive Detectors
 # =====================================================================

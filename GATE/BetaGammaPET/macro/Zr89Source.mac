@@ -1,0 +1,28 @@
+# Zirconium-89 ion source with half-life of 78.41 hrs (282276 seconds)
+
+# -------------------------------------------------------------
+# Source Geometry
+# -------------------------------------------------------------
+/gate/source/addSource				    point
+/gate/source/point/gps/pos/type		    Volume
+/gate/source/point/gps/pos/shape		Sphere
+/gate/source/point/gps/pos/radius	    0.1 mm
+/gate/source/point/gps/ang/type			iso
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Zr-89 as ion source 
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/gate/source/point/gps/particle                 ion
+/gate/source/point/gps/ion                      40 89 0 0           # Z = 40, A = 89
+/gate/source/point/gps/ene/mono                 0. keV
+/gate/source/point/setActivity                  7.0 MBq
+/gate/source/point/setForcedUnstableFlag        true
+/gate/source/point/setForcedHalfLife            282276 s
+
+
+# =================================================================================
+# ---------------------------------------------------------------------------------
+#   NOTE: In Physics.mac file, be sure to add process 'RadioactiveDecay' in order
+#         to get decay physics for ion source.
+#           - /gate/physics/addProcess RadioactiveDecay
+# =================================================================================
