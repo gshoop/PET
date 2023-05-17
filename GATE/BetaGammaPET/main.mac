@@ -27,7 +27,7 @@
 #----------------------------
 # Scanner Geometry
 #----------------------------
-/control/execute ./macro/Geometry.mac
+/control/execute ./macro/CylindricalPETGeometry.mac
 #/control/execute ./macro/Visualisation.mac
 
 
