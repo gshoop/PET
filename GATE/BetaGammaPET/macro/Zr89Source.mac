@@ -31,7 +31,7 @@
 /gate/source/point/setType			pPs
 /gate/source/point/setEnableDeexcitation	true
 /gate/source/point/setPromptGammaEnergy		909.0 keV
-/gate/source/point/setActivity			20 kBq
+/gate/source/point/setActivity			500 kBq
 #/gate/source/point/setForcedUnstableFlag	true
 /gate/source/point/setForcedHalfLife		282276 s
 /gate/source/point/setPositroniumFraction	pPs 1.0
