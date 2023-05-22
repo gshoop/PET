@@ -15,7 +15,7 @@
 /gate/source/point/gps/particle                 ion
 /gate/source/point/gps/ion                      40 89 0 0           # Z = 40, A = 89
 /gate/source/point/gps/ene/mono                 0. keV
-/gate/source/point/setActivity                  7.0 MBq
+/gate/source/point/setActivity                  80 kBq
 /gate/source/point/setForcedUnstableFlag        true
 /gate/source/point/setForcedHalfLife            282276 s
 
