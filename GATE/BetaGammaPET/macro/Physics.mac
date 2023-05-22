@@ -9,8 +9,8 @@
 #/gate/physics/addProcess PhotoElectric gamma
 #/gate/physics/processes/PhotoElectric/setModel StandardModel
 
-/gate/physics/Gamma/SetCutInRegion	    world	1 mm
-/gate/physics/Electron/SetCutInRegion	world	1000 km
+/gate/physics/Gamma/SetCutInRegion	world	1 mm
+/gate/physics/Electron/SetCutInRegion	world	4 mm
 /gate/physics/Positron/SetCutInRegion	world	1 mm
 
 #/gate/physics/processList Enabled

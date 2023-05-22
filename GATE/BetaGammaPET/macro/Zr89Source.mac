@@ -3,22 +3,38 @@
 # -------------------------------------------------------------
 # Source Geometry
 # -------------------------------------------------------------
-/gate/source/addSource				    point
-/gate/source/point/gps/pos/type		    Volume
-/gate/source/point/gps/pos/shape		Sphere
-/gate/source/point/gps/pos/radius	    0.1 mm
-/gate/source/point/gps/ang/type			iso
+#y/gate/source/addSource				    point
+#/gate/source/point/gps/pos/type		    Volume
+#/gate/source/point/gps/pos/shape		Sphere
+#/gate/source/point/gps/pos/radius	    0.1 mm
+#/gate/source/point/gps/ang/type			iso
 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Zr-89 as ion source 
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/gate/source/point/gps/particle                 ion
-/gate/source/point/gps/ion                      40 89 0 0           # Z = 40, A = 89
-/gate/source/point/gps/ene/mono                 0. keV
-/gate/source/point/setActivity                  80 kBq
-/gate/source/point/setForcedUnstableFlag        true
-/gate/source/point/setForcedHalfLife            282276 s
+#/gate/source/point/gps/particle                 ion
+#/gate/source/point/gps/ion                      40 89 0 0           # Z = 40, A = 89
+#/gate/source/point/gps/ene/mono                 0. keV
+#/gate/source/point/setActivity                  20 kBq
+#/gate/source/point/setForcedUnstableFlag        true
+#/gate/source/point/setForcedHalfLife            282276 s
 
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Mimicking Zr-89 for %100 prompt gamma emmission probability
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/gate/source/addSource				point Extended
+/gate/source/point/gps/pos/type			Volume
+/gate/source/point/gps/pos/shape		Sphere
+/gate/source/point/gps/pos/radius		0.1 mm
+/gate/source/point/gps/ang/type			iso
+
+/gate/source/point/setType			pPs
+/gate/source/point/setEnableDeexcitation	true
+/gate/source/point/setPromptGammaEnergy		909.0 keV
+/gate/source/point/setActivity			20 kBq
+#/gate/source/point/setForcedUnstableFlag	true
+/gate/source/point/setForcedHalfLife		282276 s
+/gate/source/point/setPositroniumFraction	pPs 1.0
 
 # =================================================================================
 # ---------------------------------------------------------------------------------
